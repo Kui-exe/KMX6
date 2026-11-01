@@ -1,0 +1,9 @@
+{
+  "Main.cpp": "898fb4f725a0a92ed6d70ecb5a46423dc1be55b82d93646f5b01e58619b66abd",
+  "MixerBenchmark.h": "539047a80ad898fb6427b5df0fd50a21d69e51e15e5f1a3a37d57e481a1ace7a",
+  "AudioCore.h": "5fdbdc2a8f2d36a1ccb729f47b2509fface24e6ffb3b745bd44cba562e7e9cfe",
+  "PluginHost.h": "8fb2d2d1d0bbf7ca93a45f4653dbeb76333cdbcaaa6a7847a53cd2d366270c9c",
+  "NativeCapture.cpp": "d3ddef3a7a66fd482534b21db8cf8ff20599097c1939a26422a8d9d7bce36277",
+  "VirtualOutput.h": "ce9261faca0a8caaf5b0667a16b717269f266c00319ed3a3a587f9fe12cdad12",
+  "benchmark-build-exe": "91a1b735dec48974c81f7deb98ec231c8316c89a035c1b1a55832ad986d023c7"
+}

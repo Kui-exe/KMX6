@@ -1,0 +1,10 @@
+KMX6 V1 - Corresponding source availability
+
+The app uses the AGPL-3.0-or-later licensing option. The matching source archive is provided separately as KMX6-V1-Source.zip alongside KMX6-V1-Setup.exe in the release folder. It is not embedded in this installer or installed with the application, and is not required for normal use.
+
+If you received only the installer, obtain the matching source archive from whoever supplied this release. When redistributing this build, provide recipients access to that corresponding archive as well. Preserve the license and third-party notices.
+
+The archive includes app and relevant dependency source, assets, build instructions and installer recipes. Read BUILDING.txt inside it to rebuild.
+
+Public repository: https://github.com/Kui-exe/KMX6
+Complete matching V1 source archive: https://github.com/Kui-exe/KMX6/releases/download/v1.0.0/KMX6-V1-Source.zip

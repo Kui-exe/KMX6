@@ -1,0 +1,21 @@
+PASS two simultaneous effects process in series
+PASS another channel runs an independent effect at the same time
+PASS other channels retain dry audio
+PASS reordering changes noncommutative processing order
+PASS bypass only affects the selected slot
+PASS removing one effect leaves the other running
+PASS Live mode skips a high-latency slot without bypassing other effects
+PASS disabling Live mode processes the full chain
+PASS eight effects per channel limit preserves the existing chain
+PASS removing an effect preserves its empty slot
+PASS effects move into empty slots without changing audio
+PASS slot mix blends dry and processed audio
+PASS zero percent mix preserves dry stereo audio
+PASS full mix preserves fully processed audio
+PASS recursive custom-folder discovery deduplicates overlapping roots and VST3 bundles
+PASS bundle binary changes invalidate cached scan results
+PASS custom scan folders persist
+PASS cached discovery results persist without duplicate effect entries
+PASS failed scans are excluded from the plugin browser
+
+19 passed / 0 failed. No audio devices opened.

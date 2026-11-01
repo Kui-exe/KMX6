@@ -1,0 +1,17 @@
+PASS all control bounds stay unchanged through 108 scale changes (25%-200%)
+PASS all six strips use exactly one uniform transform
+PASS pointer coordinates map back to the original control positions at every scale
+PASS canvas dimensions match every requested 5% step
+PASS 100% restores exact original geometry without cumulative drift
+PASS scale clamps to 25%-200% and snaps to 5% increments
+PASS window client area follows the complete scaled canvas at every size without a scroll viewport
+PASS scale requests begin at the current visual size without jumping
+PASS animation eases monotonically to the exact 5% target without overshoot
+PASS control layout bounds remain fixed throughout fractional animation frames
+PASS rapid reverse clicks retarget from the current frame without a size jump
+PASS retargeted animation settles at the exact saved percentage
+PASS zoom frames reuse the captured mixer image instead of repainting all controls
+PASS fractional resize frames fill their full bounds with an opaque dark background
+PASS live control rendering resumes after the zoom frame is released
+
+15 passed / 0 failed. No audio devices opened.

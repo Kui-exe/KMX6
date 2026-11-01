@@ -1,0 +1,18 @@
+PASS B1 uses host-compatible KMX1 and the correct bus index
+PASS B1 is not ready before host acknowledgement
+PASS B1 returns the requested 48 kHz stereo PCM block
+PASS B1 clears ready status after a rejected request
+PASS B2 uses host-compatible KMX1 and the correct bus index
+PASS B2 is not ready before host acknowledgement
+PASS B2 returns the requested 48 kHz stereo PCM block
+PASS B2 clears ready status after a rejected request
+PASS B3 uses host-compatible KMX1 and the correct bus index
+PASS B3 is not ready before host acknowledgement
+PASS B3 returns the requested 48 kHz stereo PCM block
+PASS B3 clears ready status after a rejected request
+PASS B4 uses host-compatible KMX1 and the correct bus index
+PASS B4 is not ready before host acknowledgement
+PASS B4 returns the requested 48 kHz stereo PCM block
+PASS B4 clears ready status after a rejected request
+
+16 passed / 0 failed. No Windows audio endpoints opened.

@@ -1,0 +1,12 @@
+JUCE: 9.0.4 / commit 454fe891acc8204f99f4ef1e3a28c84b1a4da145
+Virtual-Cables: 8a819c29971d30a73955178ac8a3aac00b1a5230
+Go: go1.27.3 windows/amd64
+USB/IP: v.0.9.8.1
+USB/IP installer SHA256: 38CAD6D4432B52D5BB9409D9AD03B72FDFFC4ADA4CD3A48FBECA1A2752A8518A
+miniaudio: 0.11.23 / miniaudio.h SHA256 7E4F3F13C8FE66DF2080AC3DD12A89193E3C2463CB7F067C798ABD7331CD8EE6
+
+VB-CABLE Pack45 and Hi-Fi Cable 1.0.0.7 - Vincent Burel / VB-Audio. Proprietary standalone drivers, installed separately by the user. https://vb-audio.com/Cable/
+Not integrated into the KMX6 installer or relicensed. Legacy optional-driver archives are not part of the runtime or release payload. Both x64 drivers passed SignTool /kp verification.
+
+VST3 SDK: 3.8.0, vendored with the JUCE commit above. Used for 64-bit VST3 effect hosting. Steinberg Media Technologies GmbH; the vendored SDK LICENSE.txt is MIT. Source: third_party/JUCE/modules/juce_audio_processors_headless/format_types/VST3_SDK.
+Credits list checked against the current build on 2026-11-01; this records bundled dependencies, not latest upstream release availability.

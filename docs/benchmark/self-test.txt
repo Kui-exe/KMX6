@@ -1,0 +1,57 @@
+PASS fixed computer channels prefer distinct native cable endpoints
+PASS renamed cable endpoints take priority over legacy virtual outputs
+PASS missing native cables retain existing computer sources
+PASS fixed sources reject unrelated cables and capture endpoints
+PASS unity gain
+PASS -60 dB gain
+PASS +12 dB gain
+PASS hardware output mapping supports non-default channel destinations
+PASS mono output folds stereo down without dropping a side
+PASS missing output channels remain silent without invalid writes
+PASS shared hardware destinations mix both buses instead of overwriting
+PASS stereo bridge preserves channels
+PASS latency telemetry reports actual queue depth in milliseconds
+PASS empty bridge produces silence
+PASS empty queue latency is zero
+PASS reset clears latency telemetry
+PASS bridge waits for full callback safety reserve
+PASS bridge overflow stays bounded
+PASS stalled bridge recovers to recent audio without draining stale backlog
+PASS normal bridge backlog remains continuous
+PASS batched queue writes preserve stereo samples
+PASS batched queue overflow is bounded and accounted for
+PASS monitor and send routing stay independent
+PASS routing changes ramp to destination
+PASS mute reaches silence
+PASS pan routes left
+PASS high-pass rejects DC
+PASS EQ remains finite at extreme settings
+PASS A2 routes independently of A1 and B buses
+PASS B2 routes independently of B1 and hardware buses
+PASS one channel can feed both virtual mixes
+PASS mic limiter enforces peak ceiling
+PASS mic limiter preserves stereo balance
+PASS mic limiter reports gain reduction
+PASS mic limiter releases after overload
+PASS gate opens for signal above threshold
+PASS gate closes after hold and release
+PASS disabled gate passes quiet signal
+PASS limiter respects adjustable threshold
+PASS scheduler shortage adds bounded safety reserve
+PASS audio resumes with a short fade after starvation
+PASS repeated scheduler stalls cannot grow safety delay beyond 20 ms
+PASS queue waits for a whole callback before starting
+PASS glow responds separately to left bass and right treble
+PASS glow detector tracks signal loudness
+PASS glow detector has no energy for silence
+PASS stable playback automatically releases extra latency without underruns
+PASS six simulated clock and sample-rate combinations remain bounded for 64 seconds each
+PASS stale-backlog recovery crossfades instead of stepping between samples
+PASS A2 small callbacks stay continuous when primary audio arrives in larger bursts
+PASS capture reserve follows one packet plus 2 ms instead of a fixed 30 ms
+PASS reduced capture queue handles 10 ms packets and uneven 256-frame consumer timing for ten seconds
+PASS reduced capture queue stays below the old 30 ms target
+PASS explicit backlog trims publish dropout event and frame counts
+PASS source restart resets dropout counters
+
+55 / 55 passed

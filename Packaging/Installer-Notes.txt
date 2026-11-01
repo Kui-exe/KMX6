@@ -1,0 +1,20 @@
+KMX6 V1 - Required downloads and automatic driver setup
+Publisher: KMX6 Project (individual)
+
+KMX6 depends on the USB/IP virtual-audio driver and Microsoft Visual C++ x64 runtime.
+
+When you click Install, setup automatically downloads and installs any missing components:
+- USB/IP Client for Windows 0.9.8.1 from the official GitHub release.
+- Microsoft Visual C++ x64 Runtime 14.51 or newer from Microsoft.
+
+Allow approximately 50 MB of downloads if both components are needed. An Internet connection and administrator approval may be required. Existing compatible installations and previously verified downloads are reused. Downloaded installers are checked before execution; the pinned driver also has a fixed SHA-256 check. If download or setup fails, KMX6 will not be launched automatically. Use Repair KMX6 Audio from the Start menu to retry.
+
+A Windows restart may be required. Setup never forces an automatic restart or disables Windows driver-signature checks, Secure Boot, or other security features. Your Windows default audio devices are not changed.
+
+The app and documentation are installed for the current user. Hardware-vendor ASIO drivers, optional VB-CABLE/Hi-Fi Cable, and third-party effect plugins are not bundled or automatically downloaded.
+
+The corresponding source archive is a separate release file, KMX6-V1-Source.zip, supplied alongside this installer. Source is not installed and is not required to run KMX6. When sharing this AGPL build, also provide recipients access to that matching archive.
+
+KMX6 and this installer are unsigned; Windows may show an unknown-publisher warning. The downloaded Microsoft and USB/IP installers retain their verified upstream signatures.
+
+Uninstall removes app files and shortcuts, while keeping user-created settings/logs, the verified download cache and shared dependencies. These shared components can be removed separately in Windows Settings when no program needs them.

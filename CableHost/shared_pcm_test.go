@@ -1,0 +1,3 @@
+package usbip
+import("testing";"sync/atomic")
+func TestKMX6SharedPCMOrderingAndWrap(t *testing.T){s,err:=newSharedPCM("Local\\KMX6PCMRegression");if err!=nil{t.Fatal(err)};defer s.close();s.write([]byte{1,2,3,4,5,6,7,8});if atomic.LoadUint32(s.word(4))!=2||s.memory[64]!=1||s.memory[71]!=8{t.Fatal("shared stereo PCM was not published in frame order")};atomic.StoreUint32(s.word(4),pcmCapacity-1);atomic.StoreUint32(s.word(8),pcmCapacity-1);s.write([]byte{11,12,13,14,21,22,23,24});if atomic.LoadUint32(s.word(4))!=pcmCapacity+1||s.memory[64+(pcmCapacity-1)*4]!=11||s.memory[64]!=21{t.Fatal("shared PCM wrap lost samples")};if atomic.LoadUint32(s.word(8))!=pcmCapacity-1{t.Fatal("producer changed the consumer cursor")}}

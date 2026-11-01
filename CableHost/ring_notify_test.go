@@ -1,0 +1,4 @@
+package audio
+import "testing"
+func TestKMX6RingNotifications(t *testing.T){r:=NewRing(16);r.Write([]byte{1,2,3,4});select{case <-r.Changed():default:t.Fatal("write did not signal PCM reader")};p:=make([]byte,4);r.ReadSilence(p);select{case <-r.Changed():default:t.Fatal("read did not signal capture producer")};if p[0]!=1||p[3]!=4{t.Fatal("notification changed PCM")};for i:=0;i<100;i++{r.Write([]byte{1})};select{case <-r.Changed():default:t.Fatal("coalesced writes lost notification")};if r.Available()>r.Capacity(){t.Fatal("ring exceeded capacity")}}
+func TestKMX6RingResetWakesWaitingProducer(t *testing.T){r:=NewRing(16);r.Write([]byte{1,2,3,4});<-r.Changed();r.Reset();select{case <-r.Changed():default:t.Fatal("reset did not wake parked capture producer")};if r.Available()!=0{t.Fatal("reset left stale PCM")}}
