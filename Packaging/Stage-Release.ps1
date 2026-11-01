@@ -22,3 +22,6 @@ $licenses=@{
 }
 foreach($file in $licenses.Keys){Copy-ReleaseFile (Join-Path $ProjectRoot $file) ('Licenses/'+$licenses[$file])}
 Write-Host "Clean release files staged in $application. Source and dependency installers are not embedded."
+
+Get-ChildItem -LiteralPath (Join-Path $ProjectRoot 'third_party/Virtual-Cables/LICENSES') -File | ForEach-Object {Copy-ReleaseFile $_.FullName ('Licenses/Virtual-Cables/'+$_.Name)}
+
