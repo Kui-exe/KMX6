@@ -1,6 +1,6 @@
 param([string]$OutputPath="")
 $ErrorActionPreference='Stop'
-$projectRoot=$PSScriptRoot
+$projectRoot=Split-Path $PSScriptRoot -Parent
 $hostOutput=if($OutputPath){$OutputPath}else{Join-Path $projectRoot 'bin\KMX6CableHost.exe'}
 $module=Join-Path $projectRoot 'third_party\Virtual-Cables\src'
 $entry=Join-Path $module 'cmd\kmx6cables'
@@ -80,3 +80,4 @@ try{
  & $go build -trimpath -ldflags '-H=windowsgui' -o $hostOutput ./cmd/kmx6cables
  if($LASTEXITCODE){throw 'Cable host build failed'}
 }finally{Pop-Location}
+

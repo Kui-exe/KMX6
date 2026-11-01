@@ -1,6 +1,6 @@
 param([switch]$InstallDriver,[switch]$ReconnectOnly,[string]$CacheDirectory=(Join-Path ([Environment]::GetFolderPath('LocalApplicationData')) 'KMX6/Downloads'))
 $ErrorActionPreference='Stop'
-$projectRoot=$PSScriptRoot
+$projectRoot=Split-Path $PSScriptRoot -Parent
 $identity=[Security.Principal.WindowsIdentity]::GetCurrent()
 $principal=[Security.Principal.WindowsPrincipal]::new($identity)
 if(!$ReconnectOnly -and !$principal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)){
@@ -67,3 +67,5 @@ try {
  if(!$ReconnectOnly -and (Test-Path $renameScript)){try{Write-Host (& $renameScript)}catch{Write-Warning $_.Exception.Message}}
  Write-Host 'KMX6 Computer 1 / Computer 2 playback and Mic B1 / B2 / B3 / B4 recording are attached. Devices will reconnect automatically.'
 } catch {Write-Host ('KMX6 device setup failed: '+$_.Exception.Message);exit 1} finally {Stop-Transcript | Out-Null;$setupMutex.ReleaseMutex();$setupMutex.Dispose()}
+
+

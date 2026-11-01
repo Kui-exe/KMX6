@@ -44,7 +44,7 @@ This is the first public release, with further reliability work planned. See the
 
 - `Source`, `CableHost`, `Assets`: maintained implementation and artwork.
 - `docs`: guides, dependency records, benchmarks and the open-source checklist.
-- `Packaging`: installer and release-staging recipes.
+- `tools/scripts`: build and setup scripts.`Packaging`: installer and release-staging recipes.
 - `third_party`, `tools/USBip`: pinned/vendored dependencies and client SDK.
 - `build`, `bin`, `dist`: ignored generated files and local runtime state.
 
@@ -56,7 +56,7 @@ The repository pins JUCE as a Git submodule. Clone with:
 git clone --recurse-submodules https://github.com/Kui-exe/KMX6.git
 cd KMX6
 .uild.ps1
-.\Build-CableHost.ps1
+.\tools\scripts\Build-CableHost.ps1
 ```
 
 Build prerequisites: Windows x64, Visual Studio 2026 with Desktop development with C++, Windows SDK and Visual Studio CMake tools; compatible Go on PATH (the release used Go 1.27.3). See [the build guide](docs/BUILDING.md).
@@ -78,3 +78,4 @@ Use [GitHub Issues](https://github.com/Kui-exe/KMX6/issues) for bug reports. Inc
 ## Contributing
 
 Read [CONTRIBUTING.md](CONTRIBUTING.md). Open-source readiness is tracked in [the checklist](docs/RELEASE-CHECKLIST.md).
+

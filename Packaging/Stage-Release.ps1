@@ -25,3 +25,4 @@ Write-Host "Clean release files staged in $application. Source and dependency in
 
 Get-ChildItem -LiteralPath (Join-Path $ProjectRoot 'third_party/Virtual-Cables/LICENSES') -File | ForEach-Object {Copy-ReleaseFile $_.FullName ('Licenses/Virtual-Cables/'+$_.Name)}
 
+

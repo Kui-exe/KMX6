@@ -1,6 +1,6 @@
 param([switch]$Elevated,[string]$CacheDirectory=(Join-Path ([Environment]::GetFolderPath('LocalApplicationData')) 'KMX6/Downloads'))
 $ErrorActionPreference='Stop'
-$root=$PSScriptRoot
+$root=Split-Path $PSScriptRoot -Parent
 . (Join-Path $root 'Dependency-Downloads.ps1')
 $setup=Join-Path $root 'Setup-VirtualIO.ps1'
 $log=Join-Path $root 'bin/dependency-setup.txt'
@@ -40,3 +40,5 @@ try {
  }finally{Stop-Transcript | Out-Null}
  exit 0
 }catch{('Setup failed: '+$_.Exception.Message) | Out-File -LiteralPath $log -Append;exit 1}
+
+

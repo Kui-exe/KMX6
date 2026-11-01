@@ -20,3 +20,4 @@ $zip=[IO.Compression.ZipArchive]::new($stream,[IO.Compression.ZipArchiveMode]::C
 try{foreach($file in ($paths|Sort-Object)){$relative=$file.Substring($ProjectRoot.Length+1).Replace('\','/');$null=[IO.Compression.ZipFileExtensions]::CreateEntryFromFile($zip,$file,('KMX6/'+$relative),[IO.Compression.CompressionLevel]::Optimal)}}finally{$zip.Dispose();$stream.Dispose()}
 Write-Host "Created complete source archive: $Destination"
 
+
