@@ -22,3 +22,11 @@ plugin-chains.xml
 plugin-library.xml
 .vs/
 __pycache__/
+
+/tools/go/*
+!/tools/go/LICENSE
+!/tools/go/PATENTS
+/tools/go.zip
+/tools/USBip/devnode.exe
+/tools/USBip/wusbip.exe
+
